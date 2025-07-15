@@ -3,13 +3,13 @@
 import Badge from "../components/Badge.astro";
 import Experiencie from "../components/Experiencie.astro";
 import BriefCaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
 import EmailIcon from "../components/icons/Email.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
-import CodeIcon from "../components/icons/Code.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
-import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -17,8 +17,8 @@ import Layout from "../layouts/Layout.astro";
   title="Portfolio de Gabriel Martinez, Desarrollador y Programador Full Stack"
   description="Portfolio de Gabriel Martinez, Desarrollador y Programador Full Stack. Con más de 1,5 años de experiencia en el desarrollo de aplicaciones web y móviles."
 >
-  <main class="px-3">
-    <SectionContainer class="py-44 pb-24">
+  <main class="px-4">
+    <SectionContainer class="py-4 pb-24">
         <img 
           class="rounded-full w-15 h-15 mb-5"
           src="https://media.licdn.com/dms/image/v2/D4D03AQHQIsyWiwgPQw/profile-displayphoto-scale_200_200/B4DZfCkYRhH4AY-/0/1751316007043?e=1758153600&v=beta&t=hRlchhOBZhQ8d1P04-qVTWtIvMIPGk4MtmEJjm2-UO0"
@@ -36,12 +36,17 @@ import Layout from "../layouts/Layout.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      
       <span class="text-xl opacity-80">
-        <span>+1,5 Años de experiencia. </span><span class="text-purple-400"> Desarrollador Full Stack.
-          </span><span class="text-green-300">De Mallorca </span>
-      </h2>
-
+        <span>+1,5 Años de experiencia. </span>
+        <span class="text-purple-400">Desarrollador Full Stack.</span>
+        <span class="text-green-300">De Mallorca
+          <img
+            src="https://flagcdn.com/w40/es.png"
+            alt="Bandera de España"
+            class="inline-block w-5 h-4 ml-1 rounded-sm align-middle"
+          />
+        </span>
+      </span>
       <nav class="flex gap-x-2 mt-4 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/gabriel-vicente-mart%C3%ADnez-mart%C3%AD-7a3849251/">
           <LinkedInIcon class="w-6 h-6" />
