@@ -1,11 +1,14 @@
 ---
 
+import CSharp from "../components/icons/CSharp.astro";
 import Css from "../components/icons/Css.astro";
 import Django from "../components/icons/Django.astro";
 import Html from "../components/icons/Html.astro";
 import JavaScript from "../components/icons/JavaScript.astro";
+import PhotoShop from "../components/icons/Photoshop.astro";
 import PostgreSQL from "../components/icons/PostgreSQL.astro";
 import Python from "../components/icons/Python.astro";
+import Unity from "../components/icons/Unity.astro";
 
 const TAGS = {
     
@@ -38,7 +41,22 @@ const TAGS = {
         name: "PostgreSQL",
         class:"text-white",
         icon: PostgreSQL,
-    }
+    },
+    CSHARP:{
+        name: "C#",
+        class:"text-white",
+        icon: CSharp,
+    },
+    UNITY:{
+        name: "Unity",
+        class:"text-white",
+        icon: Unity,
+    },
+    PHOTOSHOP:{
+        name: "Photoshop",
+        class:"text-white",
+        icon: PhotoShop,
+    },
 };
 const PROJECTS = [
     {
@@ -47,6 +65,13 @@ const PROJECTS = [
         link: "https://back-travel.com/",
         image: "projects/proyectobacktravel.png",
         tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.POSTGRESQL, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    },
+    {
+        title: "Videojuego plataforma 2D",
+        description:"Proyecto fin de grado, con diferentes niveles, enemigos y habilidades.",
+        link: "https://github.com/Adhett/ProyectoFinal",
+        image: "projects/dragonball.png",
+        tags: [TAGS.CSHARP,TAGS.UNITY,TAGS.PHOTOSHOP],
     },
     {
         title: "Memorama ",
