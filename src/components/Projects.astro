@@ -1,0 +1,68 @@
+---
+import Django from "../components/icons/Django.astro";
+import Python from "../components/icons/Python.astro";
+import Html from "../components/icons/Html.astro";
+import Css from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import PostgreSQL from "../components/icons/PostgreSQL.astro";
+const TAGS = {
+    DJANGO:{
+        name: "Django",
+        class:"text-white",
+        icon: Django,
+    },
+    PYTHON:{
+        name: "Python",
+        class:" text-white",
+        icon: Python,
+    },
+    HTML:{
+        name: "HTML",
+        class:"text-white",
+        icon: Html,
+    },
+    CSS:{
+        name: "CSS",
+        class:" text-white",
+        icon: Css,
+    },
+    JAVASCRIPT:{
+        name: "JavaScript",
+        class:"text-white",
+        icon: JavaScript,
+    },
+    POSTGRESQL:{
+        name: "PostgreSQL",
+        class:"text-white",
+        icon: PostgreSQL,
+    }
+};
+const PROJECTS = [
+    {
+        title: "Back Travel",
+        description: "Back Travel es un back office para agencias de vuelo",
+        link: "https://back-travel.com/",
+        image:"public/projects/proyectobacktravel.png",
+        tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.POSTGRESQL, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    }
+]
+---
+{
+    PROJECTS.map(({image, title, description,tags}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-purple-400 opacity-60">{title}</h3>
+            <p class="text-lg mb-4 text-pretty" >{description}</p>
+            <ul class="flex flex-row">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-6"/>
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/20" src={image} alt={title} />
+        </article>
+    ))
+}

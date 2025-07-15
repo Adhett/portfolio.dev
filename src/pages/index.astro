@@ -1,0 +1,80 @@
+---
+// Página o componente que usa Layout y Badge
+import Badge from "../components/Badge.astro";
+import Experiencie from "../components/Experiencie.astro";
+import BriefCaseIcon from "../components/icons/Briefcase.astro";
+import EmailIcon from "../components/icons/Email.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Projects from "../components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="Portfolio de Gabriel Martinez, Desarrollador y Programador Full Stack"
+  description="Portfolio de Gabriel Martinez, Desarrollador y Programador Full Stack. Con más de 1,5 años de experiencia en el desarrollo de aplicaciones web y móviles."
+>
+  <main class="px-3">
+    <SectionContainer class="py-44 pb-24">
+        <img 
+          class="rounded-full w-15 h-15 mb-5"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQHQIsyWiwgPQw/profile-displayphoto-scale_200_200/B4DZfCkYRhH4AY-/0/1751316007043?e=1758153600&v=beta&t=hRlchhOBZhQ8d1P04-qVTWtIvMIPGk4MtmEJjm2-UO0"
+          alt="Foto Gabriel" 
+        />
+      <h1 
+        class="text-white text-2xl lg:text-5xl md:text-4xl font-bold flex flex-row items-center gap-x-4 pb-6 lg:pb-5">
+        Hola! soy Gabriel 
+        <a
+          href="https://www.linkedin.com/in/gabriel-vicente-mart%C3%ADnez-mart%C3%AD-7a3849251/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      
+      <span class="text-xl opacity-80">
+        <span>+1,5 Años de experiencia. </span><span class="text-purple-400"> Desarrollador Full Stack.
+          </span><span class="text-green-300">De Mallorca </span>
+      </h2>
+
+      <nav class="flex gap-x-2 mt-4 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/gabriel-vicente-mart%C3%ADnez-mart%C3%AD-7a3849251/">
+          <LinkedInIcon class="w-6 h-6" />
+          <span class="text-white">LinkedIn</span>
+        </SocialPill>
+        <SocialPill href="https://github.com/Adhett">
+          <GitHubIcon class="w-6 h-6" />
+          <span class="text-white">GitHub</span>
+        </SocialPill>
+        <SocialPill href="mailto:adheimpact@gmail.com">
+          <EmailIcon class="w-6 h-6" />
+          <span class="text-white">Adheimpact@gmail.com</span>
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3">
+        <BriefCaseIcon class ="size-7"></BriefCaseIcon>
+        Experiencia laboral
+      </h2>
+      <Experiencie />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3">
+        <CodeIcon class ="size-7"></CodeIcon>
+        Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
+
+    <footer></footer>
+    
+  </main>
+</Layout>
