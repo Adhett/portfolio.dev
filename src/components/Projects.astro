@@ -1,11 +1,14 @@
 ---
+
 import Css from "../components/icons/Css.astro";
 import Django from "../components/icons/Django.astro";
 import Html from "../components/icons/Html.astro";
 import JavaScript from "../components/icons/JavaScript.astro";
 import PostgreSQL from "../components/icons/PostgreSQL.astro";
 import Python from "../components/icons/Python.astro";
+
 const TAGS = {
+    
     DJANGO:{
         name: "Django",
         class:"text-white",
@@ -40,31 +43,37 @@ const TAGS = {
 const PROJECTS = [
     {
         title: "Back-Travel",
-        description:"Back-Travel, Back Office para las agencias de viajes que no quieren perder tiempo en facturar.",
+        description:"Back-Travel, Back Office para las agencias de viajes.",
         link: "https://back-travel.com/",
         image: "projects/proyectobacktravel.png",
         tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.POSTGRESQL, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    },
+    {
+        title: "Memorama ",
+        description:"Memorama, creado como mini proyecto en clase.",
+        link: "https://github.com/Adhett/Juego-de-memoria",
+        image: "projects/juegomemoria.png",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     }
 ]
 ---
 {
   PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex gap-6 items-start mb-8">
-      
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a href={link} target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
         <img
-          class="w-130 h-auto rounded shadow-2xl shadow-white/20 transition duration-500 hover:scale-105"
+          class="w-[400px] h-auto rounded shadow-2xl shadow-white/20 transition duration-500 hover:scale-105 object-cover"
           src={image}
           alt={title}
         />
       </a>
       <div class="flex flex-col justify-start">
         <h3 class="text-2xl font-semibold text-purple-400 opacity-60">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <p class="text-lg mb-2 text-pretty">{description}</p>
         <ul class="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li>
-              <span class={`flex items-center gap-x-2 rounded-full text-x ${tag.class} py-2 px-2`}>
+              <span class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}>
                 <tag.icon class="size-7" />
                 {tag.name}
               </span>
@@ -75,3 +84,4 @@ const PROJECTS = [
     </article>
   ))
 }
+
