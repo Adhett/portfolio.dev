@@ -1,0 +1,36 @@
+---
+import EstudiosItem from '../components/EstudiosItem.astro';
+
+const ESTUDIOS = [
+    {
+    title: "CFGM Telecomunicaciones y Sistemas Informáticos",
+    company: "IES Alquivira",
+    date: "Septiembre 2017 - Junio 2019",
+    link: "#",
+    linkText: "Learn more",
+  },
+  {
+    title: "CFGS Desarrollo de Aplicaciones Multiplataforma",
+    company: "CIFP Pere de Son Gall",
+    date: "Septiembre 2022 - Junio 2024",
+    link: "#",
+    linkText: "Learn more",
+  },
+    {
+    title: "Especialización en Inteligencia Artificial y Big Data",
+    company: "CIFP Pau casesnoves",
+    date: "Septiembre 2025 - Actualmente",
+    link: "#",
+    linkText: "Learn more",
+  },
+  
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3 mt-10">
+  {ESTUDIOS.map((estudio) => (
+    <li class="mb-10">
+      <EstudiosItem {...estudio} />
+    </li>
+  ))}
+</ol>

@@ -1,12 +1,14 @@
 ---
 // Página o componente que usa Layout y Badge
 import Badge from "../components/Badge.astro";
+import Estudios from "../components/Estudios.astro";
 import Experiencie from "../components/Experiencie.astro";
 import BriefCaseIcon from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import EmailIcon from "../components/icons/Email.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import StudiesIcon from "../components/icons/Studies.astro";
 import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
@@ -20,8 +22,8 @@ import Layout from "../layouts/Layout.astro";
   <main class="px-4">
     <SectionContainer class="py-4 pb-24">
         <img 
-          class="rounded-full w-15 h-15 mb-5"
-          src=""
+          class="rounded-full w-35 h-35 mb-15"
+          src="https://media.licdn.com/dms/image/v2/D4D35AQHuJOhi4i6l4Q/profile-framedphoto-shrink_100_100/B4DZjc55RwHsAk-/0/1756052821461?e=1763031600&v=beta&t=7hOZyd4mBKtwbxRLNIN2jNVXIO5ndVpjC5iAL7Z9j3g"
           alt="Foto Gabriel" 
         />
       <h1 
@@ -69,6 +71,14 @@ import Layout from "../layouts/Layout.astro";
         Experiencia laboral
       </h2>
       <Experiencie />
+
+    </SectionContainer>
+        <SectionContainer id="estudios">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3">
+        <StudiesIcon class ="size-7"></StudiesIcon>
+        Estudios
+      </h2>
+      <Estudios/>
     </SectionContainer>
 
     <SectionContainer id="proyectos">
